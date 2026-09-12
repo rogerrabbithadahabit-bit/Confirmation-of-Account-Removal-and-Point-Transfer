@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Email Thread — Pixel Perfect Gmail</title>
+  <style>
+    :root{
+      --bg:#f2f2f2;
+      --bubble:#ffffff;
+      --border:#dadce0;
+      --text:#202124;
+      --muted:#5f6368;
+      --blue:#1a73e8;
+      --shadow: rgba(60,64,67,0.15);
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      font-family: Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      color:var(--text);
+    }
+
+    .email-thread {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 24px 12px;
+      box-sizing: border-box;
+    }
+
+    .email-bubble {
+      background: var(--bubble);
+      border-radius: 8px;
+      padding: 16px 24px;
+      margin: 16px auto;
+      box-shadow: 0 1px 2px var(--shadow);
+      border: 1px solid var(--border);
+      box-sizing: border-box;
+    }
+
+    .meta {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:14px;
+    }
+
+    .profile-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: #e8eaed;
+      color: #5f6368;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .sender {
+      font-size:14px;
+      font-weight:500;
+      color:var(--text);
+      margin:0 0 2px 0;
+    }
+
+    .timestamp {
+      font-size:12px;
+      color:var(--muted);
+      margin:0;
+    }
+
+    .email-body p {
+      font-size:14px;
+      line-height:1.58;
+      margin:10px 0;
+      color:var(--text);
+    }
+
+    .reply-bar {
+      background-color: var(--blue);
+      color: #fff;
+      padding: 12px 20px;
+      font-size:14px;
+      font-weight:500;
+      border-radius: 0 0 8px 8px;
+      display:flex;
+      align-items:center;
+      gap:20px;
+      height:48px;
+      box-sizing:border-box;
+      margin-top:-1px;
+    }
+
+    @media (max-width:600px) {
+      .email-thread {
+        padding: 12px 8px;
+      }
+
+      .email-bubble {
+        padding: 14px 18px;
+        margin: 12px 12px;
+      }
+
+      .profile-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+      }
+
+      .sender {
+        font-size:13px;
+      }
+
+      .timestamp {
+        font-size:11px;
+      }
+
+      .email-body p {
+        line-height:1.55;
+        margin:8px 0;
+      }
+
+      .reply-bar {
+        padding:12px 18px;
+        gap:16px;
+        height:44px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="email-thread">
+
+    <!-- Sonia Final Message -->
+    <article class="email-bubble">
+      <div class="meta">
+        <div class="profile-icon">S</div>
+        <div>
+          <p class="sender">Sonia – Klover Support</p>
+          <p class="timestamp">Sep 6, 2026 – 10:08 AM (CDT)</p>
+        </div>
+      </div>
+
+      <section class="email-body">
+        <p>Hi Blake,</p>
+
+        <p>I’ve gone ahead and deleted the Klover account associated with
+        <strong>rogerrabbithadahabit@duck.com</strong> per your request.</p>
+
+        <p>It may take up to <strong>72 hours</strong> for the deletion to fully reflect on our system.</p>
+
+        <p>After that period, you can create a new account with your updated information.</p>
+
+        <p><strong>Your points from your previous account will also be transferred to your new account, totaling 21,200 points.</strong></p>
+
+        <p>Regards,<br>Sonia<br>Klover Support</p>
+      </section>
+
+      <div class="reply-bar">
+        <span>Reply</span>
+        <span>Reply all</span>
+        <span>Forward</span>
+      </div>
+    </article>
+
+    <!-- Blake Reply -->
+    <article class="email-bubble">
+      <div class="meta">
+        <div class="profile-icon">B</div>
+        <div>
+          <p class="sender">Blake Hite</p>
+          <p class="timestamp">Sep 5, 2026 – 12:01 PM (CDT)</p>
+        </div>
+      </div>
+
+      <section class="email-body">
+        <p>Yes, please proceed.</p>
+      </section>
+    </article>
+
+    <!-- Sonia Initial Message -->
+    <article class="email-bubble">
+      <div class="meta">
+        <div class="profile-icon">S</div>
+        <div>
+          <p class="sender">Sonia – Klover Support</p>
+          <p class="timestamp">Sep 4, 2026 – 9:44 AM (CDT)</p>
+        </div>
+      </div>
+
+      <section class="email-body">
+        <p>Hi Blake,</p>
+        <p>I see you’re requesting assistance with your Klover account.<br>How can I help today?</p>
+      </section>
+    </article>
+
+  </main>
+</body>
+</html>
